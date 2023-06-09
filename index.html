@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Template portafolio desarrollador UI/UX " />
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="https://unpkg.com/primeflex@^3/primeflex.css">
+    <link rel="stylesheet" href="https://unpkg.com/primeflex/themes/saga-blue.css">
+    <script src="https://kit.fontawesome.com/b3f17f1dac.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="flex w-full fixed top-0 z-1">
+        <nav class="flex justify-content-between w-full navbar">
+            <span class="logo cursor-pointer" onclick="scrollToSection('home')">
+
+            </span>
+            <input type="checkbox" aria-label="Checkbox para mostrar y quitar hamburger menu"
+                class="checkbox xl:hidden">
+            <div class="hamburger__lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <div class="header__info flex align-items-center gap-3">
+                <ul class="flex flex-column xl:flex-row list-none">
+                    <li onclick="scrollToSection('about')">Sobre mí</li>
+                    <li onclick="scrollToSection('services')">Servicios</li>
+                    <li onclick="scrollToSection('portfolio')">Portafolio</li>
+                    <li onclick="scrollToSection('contact')">Contacto</li>
+                </ul>
+                <div class="hireMe__button pt-4">
+                    <a href="https://api.whatsapp.com/send?phone=527225136499" aria-label="Enviar mensaje al correo"
+                        class="cursor-pointer no-underline border-round-lg text-xl xl:text-sm">Contratame</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--HOME PAGE -->
+    <div class="container">
+        <section id="home"
+            class="home__page flex align-items-center justify-content-center xl\:justify-content-between grid grid-nogutter gap-4">
+            <div class="left__content col-12 xl:col-6">
+                <div class="message__bubble triangle mb-4 md:mb-2">
+                    <div class="message__text p-2 sm:p-3 text-center">
+                        <p>Hola, Yo soy</p>
+                    </div>
+                </div>
+                <h1 class="text-3xl sm:text-5xl md:text-7xl">Jose Miguel Castrillo </h1>
+                <p class="text-gray-500">
+                    Ingeniero especialista en mejora continua
+                </p>
+                <div class="home__buttons flex align-items-center gap-2 mt-6">
+                    <a href="./assets/CVBBJMCM.pdf" aria-label="Descargar curriculum"
+                        class="cursor-pointer border-round-lg no-underline" download>Descargar CV</a>
+                    <button onclick="scrollToSection('portfolio')"
+                        aria-label="Deslizar a sección portafolio para mostrar mis trabajos"
+                        class="cursor-pointer border-round-lg">Mi trabajo</button>
+                </div>
+            </div>
+            <div class="right__content col-9 sm:col-6 xl:col-5">
+                <img src="./assets/Diseño sin título.svg" alt="Foto perfil" width="100" height="100">
+            </div>
+        </section>
+        <!--ABOUT ME-->
+        <section id="about" class="about__me w-full min-h-screen flex align-items-center">
+            <div class="aboutMe__content min-h-full flex flex-column md:flex-row pt-8 md:pt-0">
+                <div class="aboutMe__info col-12 md:col-6 md:pr-6 pt-0">
+                    <h1 class="text-3xl md:text-5xl">Sobre mí</h1>
+                    <p class="text-gray-500"> Ingeniero en procesos alimentarios, Maestro en seguridad alimentaria, Lean
+                        Six Sigma Blackbelt con
+                        más de 7 años de experiencia en el desarrollo de mejoras de procesos que generan ahorros
+                        significativos en costos y tiempos. 
+                        Tengo una gran comprensión de los principios de Lean Manufacturing, Kaizen y Six Sigma. He
+                        liderado
+                        exitosamente proyectos de mejora de la calidad de los productos, reducción de costos, mejora de
+                        los
+                        procesos y el desarrollo de estrategias comerciales.</p>
+                    <div class="knowledge flex flex-column gap-3 mt-5">
+                        <p>Lean six sigma 100%</p>
+                        <div class="progress__bar progress__wordpress">
+                            <span></span>
+                        </div>
+                        <p>Mejora continua 95%</p>
+                        <div class="progress__bar progress__html">
+                            <span></span>
+                        </div>
+                        <p>ISO 22000/HACCP 80%</p>
+                        <div class="progress__bar progress__angular">
+                            <span></span>
+                        </div>
+                        <p>Análisis de datos 95%</p>
+                        <div class="progress__bar progress__reactJs">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="hireMe__button pt-4">
+                        <a href="https://api.whatsapp.com/send?phone=527225136499"
+                            aria-label="Enviar mensaje por whatsapp"
+                            class="cursor-pointer no-underline border-round-lg">Escribeme</a>
+                    </div>
+
+                </div>
+                <div class="image col p-0 mt-6 md:mt-0">
+                    <img src="./assets/lsc.svg" alt="Foto relacionado a acerca de mí" width="100" height="100">
+                </div>
+            </div>
+        </section>
+    </div>
+    <!--FREE LANCER SECTION -->
+    <section class="freelancer mb-4 mt-4 min-w-full flex flex-column justify-content-center align-items-center">
+        <p class="text-sm">Tienes un proyecto en mente?</p>
+        <h1 class="text-center">Estoy disponible como freelancer</h1>
+        <div class="hireMe__button pt-4">
+            <a href="https://api.whatsapp.com/send?phone=527225136499" aria-label="Enviar mensaje al correo"
+                class="cursor-pointer no-underline border-round-lg">Escríbeme</a>
+        </div>
+    </section>
+    <!--SERVICES -->
+    <div class="container">
+        <section id="services" class="services min-h-full w-full pb-7">
+            <div class="services__title flex flex-column gap-3 text-center">
+                <h1 class="text-3xl md:text-5xl">Mis servicios</h1>
+                <p class="text-gray-400 text-sm md:text-base">
+                    Soy especialista en:
+                </p>
+            </div>
+            <div class="services__card w-full grid grid-nogutter mt-7 gap-5">
+                <div class="card-container col-12 sm:col-6 lg:col-4">
+                    <div class="card flex align-items-center gap-3 p-2">
+                        <div class="service__logo flex align-items-center justify-content-center">
+                            <i class="fa fa-level-up"></i>
+                        </div>
+                        <div class="service__name">
+                            <p>MEJORA CONTINUA</p>
+                        </div>
+                    </div>
+                    <div class="service__description" style="display: none;">
+                        He desarrollado y ejecutado exitosamente proyectos de mejora continua, mejorando la calidad de
+                        los
+                        productos usando herramientas como:
+                        <ul>
+                            <li>DMAIC</li>
+                            <li>Análisis de Capacidad del Proceso (PCA)</li>
+                            <li>Control Estadístico de Procesos (SPC)</li>
+                            <li>Diagrama de Ishikawa (Diagrama de Espina de Pescado)</li>
+                            <li>Pruebas de Hipótesis</li>
+                            <li>Análisis de Regresión</li>
+                            <li>Voz del Cliente (VOC)</li>
+                        </ul>
+                        para la reducción de costos, mejora de los
+                        procesos y el desarrollo de estrategias comerciales, creando herramientas para la detección de
+                        desperdicios (MUDAS) y su corrección automática con algoritmos de inteligencia
+                        artificial.
+                    </div>
+                </div>
+                <div class="card-container col-12 sm:col lg:col-4">
+                    <div class="card flex align-items-center gap-3 p-2">
+                        <div class="service__logo flex align-items-center justify-content-center ">
+                            <i class="fa fa-industry"></i>
+                        </div>
+                        <div class="service__name">
+                            <p>INDUSTRIA 4.0</p>
+                        </div>
+                    </div>
+                    <div class="service__description" style="display: none;">
+                        Más de 7 años de experiencia implementando herramientas de la industria 4.0 como Big Data
+                        utilizando la suite de Apache, también el aprendizaje automático (Machine Learning) con python
+                        analizando miles de registros de producción para predecir variación del proceso, Paros no
+                        planeados de líneas, también he trabajado con Internet de las cosas (IoT) vinculando sistemas de
+                        adquisición y control de datos en tiempo real con sistemas de ejecución de manufactura (m.e.s).
+                    </div>
+                </div>
+
+                <div class="card-container col-12 sm:col md:col-4 lg:col">
+                    <div class="card flex align-items-center gap-3 p-2">
+                        <div class="service__logo flex align-items-center justify-content-center ">
+                            <i class="fa fa-flask"></i>
+                        </div>
+                        <div class="service__name">
+                            <p>Industria química y de alimentos</p>
+                        </div>
+                    </div>
+                    <div class="service__description" style="display: none;">
+                        He trabajado en grandes empresas que cumplen con regulaciones internacionales como:
+                        <ul>
+                            <li>FDA</li>
+                            <li>ASTA</li>
+                            <li>ESA</li>
+                            <li>BRC</li>
+                            <li>EHIA</li>
+                            <li>OMS</li>
+                        </ul>
+                     estándares internacionales como:
+                     <ul>
+                        <li>ISO 22000</li>
+                        <li>FSSC 22000</li>
+                        <li>RAINFOREST</li>
+                        <li>HALAL</li>
+                        <li>KOSHER</li>
+                        <li>USDA Organic</li>
+                    </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <!-- Agregar el código JavaScript aquí -->
+    <script type="text/javascript">
+        // Obtener todas las tarjetas
+        const cards = document.querySelectorAll('.card');
+
+        // Agregar un evento de mouseover a cada tarjeta
+        cards.forEach(card => {
+            card.addEventListener('mouseover', () => {
+                // Obtener la descripción del servicio dentro de la tarjeta
+                const description = card.parentNode.querySelector('.service__description');
+                // Cambiar el estilo de la descripción para que se muestre
+                description.style.display = 'block';
+            });
+            card.addEventListener('mouseout', () => {
+                // Obtener la descripción del servicio dentro de la tarjeta
+                const description = card.parentNode.querySelector('.service__description');
+                // Cambiar el estilo de la descripción para que se oculte
+                description.style.display = 'none';
+            });
+        });
+    </script>
+    <!--PORTFOLIO -->
+    <section id="portfolio" class="portfolio min-h-full w-full pb-8 pt-8">
+        <div class="portfolio__title flex flex-column gap-3 text-center">
+            <h1 class="text-3xl md:text-5xl">Mi trabajo</h1>
+            <p class="text-gray-400 text-sm md:text-base">
+                he desarrollado soluciones inteligentes para la industria y Pymes así como proyectos de desarrollo web
+            </p>
+        </div>
+        <div class="portfolio__gallery">
+            <div class="gallery__categories mb-5 mt-5">
+                <ul class="flex list-none flex-wrap justify-content-center gap-3">
+                    <li class="filter-item active" data-filter="all">Todos</li>
+                    <li class="filter-item " data-filter="gym">Html5 y Css3</li>
+                    <li class="filter-item " data-filter="tours__Web">Apis</li>
+                </ul>
+            </div>
+            <div class="proyect__gallery flex justify-content-center align-items-center flex-wrap gap-3">
+                <div class="project__card tours__Web">
+                    <img src="./assets/p1.svg" alt="">
+                    <div class="overlay"></div>
+                    <div
+                        class="project__info flex w-full flex-column justify-content-center align-items-center text-center">
+                        <h2>App entelequia</h2>
+                        <p>Sistema de gestión de manufactura para el control total de operaciones en la empresa
+                            Entelequia
+                        </p>
+                        <span><i class="fa-solid fa-arrow-right-long"></i></span>
+                    </div>
+                </div>
+
+                <div class="project__card gym">
+                    <img src="./assets/prj2.svg" alt="https://jmcmmx.github.io/portfolio/">
+                    <div class="overlay"></div>
+                    <div
+                        class="project__info flex w-full flex-column justify-content-center align-items-center text-center">
+                        <h2>Encriptador de texto</h2>
+                        <p>Proyecto de admisión para el programa ONE de Oracle, encriptador de texto usando Html5 y Css3
+                        </p>
+                        <span><i class="fa-solid fa-arrow-right-long"></i></span>
+                    </div>
+                </div>
+
+                <div class="project__card tours__Web">
+                    <img src="./assets/df.svg" alt="">
+                    <div class="overlay"></div>
+                    <div
+                        class="project__info flex w-full flex-column justify-content-center align-items-center text-center">
+                        <h2>Planificador de rutas logisticas</h2>
+                        <p> App versión mobil y Web desarrollada en Appsheet y vinculada via api con Google maps
+                        </p>
+                        <span><i class="fa-solid fa-arrow-right-long"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--FOOTER -->
+    <footer id="contact" class="min-h-full w-full flex grid col-12 justify-content-center pb-8 pt-8 lg:text-center">
+        <div class="social__media col-12 md:col-4 flex flex-column justify-content-between">
+            <h3>Redes sociales</h3>
+            <p>Auténtico e innovador</p>
+            <p>Desarrollo lo que necesitas, de manera eficiente</p>
+            <div class="social__mediaIcons mt-5 flex lg:justify-content-center gap-3">
+                <a href="https://github.com/JMCMMX" target="_blank" aria-label="Ir a github">
+                    <i class="fa fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/jose_50mx" target="_blank" aria-label="Ir a instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/ingjosecastrillo/" target="_blank" aria-label="Ir a linkedin">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+        <div
+            class="contact col-12 sm:col-6 sm:pt-0 md:pt-2 md:col-4 flex flex-column justify-content-between md:align-items-center">
+            <h3>Contacto</h3>
+            <div class="phone__number flex align-items-center gap-2">
+                <i class="fa-solid fa-phone"></i>
+                <p>+52 7225136499</p>
+            </div>
+            <div class="email flex align-items-center gap-2">
+                <i class="fa-solid fa-envelope"></i>
+                <p>jmiguelcastrillo@gmail.com</p>
+            </div>
+            <a href="https://api.whatsapp.com/send?phone=527225136499"
+                class="cursor-pointer text-center col-4 sm:col-6 xl:col-4 mt-3 no-underline border-round-lg">
+                <span>
+                    <i class="fa-solid fa-message"></i>
+                </span>Escríbeme
+            </a>
+        </div>
+        <div
+            class="my__services col-12 sm:col-6 sm:p-0 md:col-4 md:pt-2 md:align-items-center flex flex-column justify-content-between">
+            <h3>Mis Servicios</h3>
+            <p>Desarrollo web/ciencia de datos</p>
+            <p>Mejora continua</p>
+            <p>HACCP/iso22000</p>
+            <P>Lean six sigma</P>
+        </div>
+    </footer>
+    </div>
+
+</body>
+<script>
+    const filterContainer = document.querySelector(".gallery__categories");
+    const galleryItems = document.querySelectorAll(".project__card");
+
+    filterContainer.addEventListener("click", (event) => {
+        if (event.target.classList.contains("filter-item")) {
+            filterContainer.querySelector(".active").classList.remove("active");
+            event.target.classList.add("active")
+            const filterValue = event.target.getAttribute("data-filter")
+            galleryItems.forEach(item => {
+                if (item.classList.contains(filterValue) || filterValue === "all") {
+                    item.classList.remove("hide")
+                    item.classList.add("show")
+                } else {
+                    item.classList.remove("show")
+                    item.classList.add("hide")
+                }
+            })
+        }
+    })
+
+    function scrollToSection(sectionId) {
+        document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" })
+    }
+</script>
+
+</html>
